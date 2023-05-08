@@ -1,6 +1,5 @@
 import streamlit as st
 import os
-import PyPDF2
 import docx
 import haystack
 from haystack.document_stores import InMemoryDocumentStore
