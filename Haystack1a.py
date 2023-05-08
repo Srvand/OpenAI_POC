@@ -62,7 +62,7 @@ if (document_store.get_document_count()!=0):
      # QA pipeline using prompt node 
     if question != '':  
         prompt = PromptTemplate(name="lfqa",
-                             prompt_text="""Given the context and the given question,provide a short response that summarizes the relevant information presented in the paragraphs.
+                             prompt_text="""Given the context and the given question,provide a clear and concise response from the relevant information presented in the paragraphs.
                              If the question cannot be answered from the context, reply with 'No relevant information present in attached documents'.
                              \n\n Paragraphs: {join(documents)} \n\n Question: {query} \n\n Answer:""") 
         node = PromptNode("gpt-3.5-turbo", default_prompt_template=prompt, api_key=API_KEY)#
