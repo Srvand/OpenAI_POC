@@ -1,0 +1,4 @@
+Docx
+Haystack
+pdfplumber
+openai
