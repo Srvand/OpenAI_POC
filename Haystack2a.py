@@ -1,7 +1,4 @@
 import streamlit as st
-from transformers import pipeline
-from transformers import AutoTokenizer, TFAutoModelForQuestionAnswering
-# import tensorflow
 import os
 import PyPDF2
 import docx
