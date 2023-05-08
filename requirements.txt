@@ -2,3 +2,4 @@ Docx
 Haystack
 pdfplumber
 openai
+python-docx
