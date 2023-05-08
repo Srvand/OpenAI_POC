@@ -3,4 +3,4 @@ haystack
 pdfplumber
 openai
 python-docx
-haystack.document_stores
+
