@@ -43,8 +43,8 @@ def add_document(document_store, file):
     
 # create Streamlit app
 # st.title("click to add documents to Document Storage")
-# API_KEY = st.secrets['OPENAI_API_KEY']
-API_KEY='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'
+API_KEY = st.secrets['OPENAI_API_KEY']
+# API_KEY='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'
 # create file uploader
 uploaded_files = st.file_uploader("Choose a file", accept_multiple_files=True)
 
