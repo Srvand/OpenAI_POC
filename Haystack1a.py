@@ -44,7 +44,6 @@ def add_document(document_store, file):
 # create Streamlit app
 # st.title("click to add documents to Document Storage")
 API_KEY = st.secrets['OPENAI_API_KEY']
-# API_KEY='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'
 # create file uploader
 uploaded_files = st.file_uploader("Choose a file", accept_multiple_files=True)
 
@@ -65,7 +64,7 @@ if (document_store.get_document_count()!=0):
                              prompt_text="""Given the context and the given question,provide a clear and concise response from the relevant information presented in the paragraphs.
                              If the question cannot be answered from the context, reply with 'No relevant information present in attached documents'.
                              \n\n Paragraphs: {join(documents)} \n\n Question: {query} \n\n Answer:""") 
-        node = PromptNode("gpt-3.5-turbo", default_prompt_template=prompt, api_key=API_KEY)#
+        node = PromptNode("gpt-3.5-turbo", default_prompt_template=prompt, api_key=API_KEY)
         candidate_documents = retriever.retrieve(query=question,top_k=2)
         pipe = Pipeline()
         pipe.add_node(component=node, name="prompt_node", inputs=["Query"])
