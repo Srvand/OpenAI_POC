@@ -45,7 +45,7 @@ def add_document(document_store, file):
 st.title("Contextualized Search for Document Archive")
 API_KEY = st.secrets['OPENAI_API_KEY']
 # create file uploader
-uploaded_files = st.file_uploader("Choose a file", accept_multiple_files=True)
+uploaded_files = st.file_uploader("Upload Files", accept_multiple_files=True)
 
 # loop through uploaded files and add them to document store
 if uploaded_files:
@@ -53,7 +53,7 @@ if uploaded_files:
         add_document(document_store, file)
 document_store.write_documents(documents)
 # display number of documents in document store
-st.write(f"Number of documents in document store: {document_store.get_document_count()}")
+st.write(f"Number of documents uploaded to document store: {document_store.get_document_count()}")
 
 if (document_store.get_document_count()!=0):
     question = st.text_input('Ask a question')
