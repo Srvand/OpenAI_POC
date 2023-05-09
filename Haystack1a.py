@@ -42,7 +42,7 @@ def add_document(document_store, file):
 
     
 # create Streamlit app
-# st.title("click to add documents to Document Storage")
+st.title("Contextualized Search for Document Archive")
 API_KEY = st.secrets['OPENAI_API_KEY']
 # create file uploader
 uploaded_files = st.file_uploader("Choose a file", accept_multiple_files=True)
