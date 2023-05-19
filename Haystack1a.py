@@ -69,7 +69,11 @@ if (document_store.get_document_count()!=0):
         pipe = Pipeline()
         pipe.add_node(component=node, name="prompt_node", inputs=["Query"])
         output = pipe.run(query=question, documents=candidate_documents)
-        st.write(output["results"][0])
+        if output:
+            st.write(output["results"][0])
+        else:
+            st.write('Please try with another question')
+        # st.write(output["results"][0])
 
 
 
